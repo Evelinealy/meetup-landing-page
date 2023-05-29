@@ -30,7 +30,26 @@
   --body-line-height: 26px;
 }
 
-p {
-  color: var(--primary-color);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  box-sizing: border-box;
   font-family: var(--text-font);
+  grid-template-areas:
+    "heading heading"
+    "hero hero"
+    "main main"
+    "footer footer";
+}
+
+.logo-heading {
+  grid-area: heading;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
