@@ -187,6 +187,26 @@ h2 {
   right: -32px;
 }
 
+@media only screen and (max-width: 810px) {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    height: 800px;
+    gap: 0px;
+  }
+  .hero .image-hero-1 {
+    grid-column: 1 / 2;
+  }
+  .hero .hero-text {
+    grid-column: 1 / span 2;
+    width: 100%;
+  }
+  .hero .image-hero-2 {
+    grid-column: 2 / 3;
+  }
+}
+
 /* === IMAGES GRID SECTION === */
 .images {
   width: 100vw;
@@ -238,6 +258,13 @@ h2 {
   border-radius: 0.5em;
 }
 
+@media only screen and (max-width: 810px) {
+  .images-grid-container img {
+    width: 164px;
+    height: 156px;
+  }
+}
+
 /* === ABOUT MEET SECTION === */
 .about {
   display: flex;
@@ -261,6 +288,15 @@ h2 {
 .about p {
   text-align: center;
   width: 27%;
+}
+
+@media only screen and (max-width: 810px) {
+  .about h2 {
+    width: 55%;
+  }
+  .about p {
+    width: 70%;
+  }
 }
 
 /* === FOOTER SECTION === */
@@ -318,4 +354,25 @@ h2 {
 
 .footer .button-secondary {
   z-index: 1;
+}
+
+@media only screen and (max-width: 810px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 40vh;
+  }
+
+  .footer h2 {
+    width: 50%;
+    text-align: center;
+    padding-bottom: var(--padding-lg);
+    padding-top: var(--padding-lg);
+  }
+  .footer p {
+    width: 75%;
+    text-align: center;
+    padding-bottom: var(--padding-lg);
+  }
 }
