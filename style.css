@@ -55,6 +55,7 @@ body {
     "hero"
     "main"
     "footer";
+  overflow-x: hidden;
 }
 
 h1 {
@@ -198,12 +199,48 @@ h2 {
   .hero .image-hero-1 {
     grid-column: 1 / 2;
   }
+
   .hero .hero-text {
     grid-column: 1 / span 2;
     width: 100%;
   }
+
+  .hero .hero-text h1 {
+    width: 50%;
+  }
+
   .hero .image-hero-2 {
     grid-column: 2 / 3;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .hero {
+    height: 500px;
+  }
+
+  .hero .image-hero-1 img {
+    width: 50%;
+    height: auto;
+    left: -16px;
+  }
+
+  .hero .hero-text h1 {
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    text-align: center;
+    width: 90%;
+  }
+
+  .hero .hero-text p {
+    text-align: center;
+    width: 80%;
+  }
+
+  .hero .image-hero-2 img {
+    width: 50%;
+    height: auto;
+    right: -16px;
   }
 }
 
@@ -265,6 +302,20 @@ h2 {
   }
 }
 
+@media only screen and (max-width: 428px) {
+  .images-grid-container {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--padding-lg);
+  }
+
+  .images-grid-container img {
+    height: auto;
+    width: 130px;
+  }
+}
+
 /* === ABOUT MEET SECTION === */
 .about {
   display: flex;
@@ -296,6 +347,18 @@ h2 {
   }
   .about p {
     width: 70%;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .about .overline-text {
+    width: 100%;
+  }
+  .about h2 {
+    width: 100%;
+  }
+  .about p {
+    width: 100%;
   }
 }
 
@@ -358,6 +421,10 @@ h2 {
 
 @media only screen and (max-width: 810px) {
   .footer {
+    background: linear-gradient(#4d97a9e3, #4d97a9e3),
+      url("assets/images/tablet/image-footer.jpg");
+  }
+  .footer {
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -374,5 +441,15 @@ h2 {
     width: 75%;
     text-align: center;
     padding-bottom: var(--padding-lg);
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  .footer {
+    background: linear-gradient(#4d97a9e3, #4d97a9e3),
+      url("assets/images/mobile/image-footer.jpg");
+  }
+  .footer h2 {
+    width: 70%;
   }
 }
